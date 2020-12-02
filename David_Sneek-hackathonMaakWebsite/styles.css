@@ -1,0 +1,440 @@
+/*
+  default screensize: smartphone: min 500px
+  @media for desktop, tablet and widescreen.
+  David Sneek
+*/
+
+html, main, body {
+    height: 100%;
+    background-color: #384047; /*2do: set this for bigger screens as well */
+    
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+.container {
+    height: 100%;
+    min-width: 430px;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-rows: 50px 175px 1fr 100px 250px;
+    grid-template-areas:
+    ". h ."
+    ". n ."
+    ". m ."
+    ". a ."
+    ". f .";
+    }
+  /* grid-area header: start */  
+    .header 
+        {   grid-area: h; 
+            background-color: #f4f7f8; /* 2do: use following color to mark the input fields:  #e8eeef; */
+            font-size: 12px;    
+            border-style: solid;      
+    }
+
+      h1 {
+        margin: 0 0 30px 0;
+        text-align: center; 
+        color: #FFF;
+        background-color: #4bc970;
+        font-size: 20px;
+        text-align: center;
+        font-style: normal;
+        padding: 10px;
+        border-radius: 0px;
+      }
+  /* grid-area header: end */
+
+  /* grid-area nav: start */
+  .nav {   grid-area: n;
+          display: flex;
+          background-color: #f4f7f8;
+          font-size: 22px;
+          border-style: solid;  
+          height: 100%;
+          list-style-type: none;
+          flex-direction: column;
+          justify-content: flex-start;
+          flex-wrap: wrap; 
+          text-align: left;      
+  }   
+    /*flexbox items*/
+    /*remark: all urls outside the grid-area nav are styled by this code as well. Additionally there is a separate .styleLink class.*/
+    .nav > li, .styleLink { 
+        padding: 10px 5px;
+        font-size: 20px;
+        color:  #4bc970;
+        box-sizing: border-box;
+       /* background-color: yellow;  activate this property only to modify flexbox */ 
+        list-style-type: none;
+        margin: 5px;
+    }
+    /* flexbox item: links */
+    /*remark: all urls outside the grid-area nav are styled by this code as well. Additionally there is a separate .styleLink class.*/
+    nav> li > a, .styleLink {
+        color: #FFF;
+        background-color: #4bc970;
+        font-size: 20px;
+        text-align: center;
+        font-style: normal;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    /* flexbox item: logo for mobile size only */
+    .companyLogo {
+    width: 200px;
+    height: 140px;
+    align-self: center;   
+    }
+
+    /* companyLogo for size tablet and bigger (is not contained in a flexbox)*/
+    .companyLogo2 {
+        display: none;
+    }
+      /* grid-area nav: end */
+
+  /* grid-area main: start */
+  .main {   
+        grid-area: m;
+        background-color: #f4f7f8;
+        font-size: 22px;
+        border-style: solid;    
+  }
+
+  /*grid-area main:  page home: */      
+  .videoContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+  div.videoContainer video {
+    width: 390px;
+    height: auto;
+    margin: 10px; 
+  } 
+      
+  /*grid-area main:  pages diensten en voorwaarden: start*/
+  h2, h3, ol.regels, p.disclaimer {
+    margin: 30px;
+  }
+
+  ul.sportlessen {
+    margin: 20px;
+  }
+
+  p.paragraphStyling {
+    margin: 33px;
+  }
+  /* .styleLink is also being styled by the css-code that styles the flex-items of the navbar on the webpage.  */
+  .styleLink {
+  list-style-type: none;
+  margin: 33px;
+  }
+  .reptileOnHand {
+  width: 380px;
+  height: auto;
+  margin: 30px;
+  }
+  /*grid-area main: pages diensten en voorwaarden: end*/
+
+  /*grid-area main:  page inschrijven: start */      
+  form {
+    max-width: 400px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+  }
+    
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: black;  /*option: #8a97a0; */
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+  }
+
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+
+  button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+
+  .fieldsetTitle {
+    background-color: #5fcf80;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+  /*grid-area main:  page inschrijven: end */   
+  /*grid-area aside: start */    
+  .aside {   
+          grid-area: a;
+          background-color: #f4f7f8;
+          font-size: 22px;
+          border-style: solid;  
+  }
+
+    .asideContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .asideContainer > li {
+      list-style-type: none;
+      font-size: 14px;
+      /* background-color: yellow;  */
+      width: 200px;        
+    }
+    .hillsLogo {
+      width: 80px;
+      height: 50px;
+      align-self: fle;   
+      /* background-color: orange;*/
+    }
+
+  /*grid-area footer: start */    
+  .footer {   
+    grid-area: f;
+    background-color:#f4f7f8;
+    border-style: solid; 
+
+    background-image: url("img/dog_with_ball.jpg");
+    background-size: 100% 100%;
+  }
+            
+    
+      
+
+@media screen and (min-width: 600px) /* tablet */ {
+  .container {
+      height: 100%;
+      grid-gap: 7px;
+      grid-template-columns: 30px 1fr 1fr 30px;
+      grid-template-rows: 200px 1fr 150px 200px;
+      grid-template-areas:
+      ". h n ."
+      ". m m ."
+      ". a a ."
+      ". f f .";
+  }
+  
+
+    /*grid-area header: start */  
+        /*goal: swap company logo from flexbox navbar in nav to header, where it is not part of a flexbox*/
+    h1, img.companyLogo {
+        display: none;
+    }
+
+    .header {
+        background-image: url("img/animal_fitness_logo2.jpg");
+        background-size: 100% 100%;
+
+    }
+ 
+    /*grid-area nav: start */  
+    .nav {   
+        font-size: 20px;
+        text-align: center;   
+    }
+    /*flexbox items */
+    .nav > li { 
+      font-size: 20px;
+    }
+   
+    /*grid-area main:  page home: start */  
+    div.videoContainer video {
+      width: 440px;
+      height: auto;
+      margin: 10px; 
+    } 
+   
+   /*grid-area main:  page inschrijven: start */      
+   form {
+    max-width: 500px;
+   }    
+
+    /*grid-area main:  page Diensten: start */  
+    .reptileOnHand {
+      width: 450px;
+      height: auto;
+    }
+
+    .asideContainer > li {
+      font-size: 18px;
+      width: 250px;    
+  
+    }
+    .hillsLogo {
+      width: auto;
+      height: 80px;
+     
+    }
+    /*grid-area footer: start */  
+    .footer {
+      background-image: url("img/dogRow.png");
+      background-size: 100% 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) /* Desktop, HD */ {
+  .container {
+      height: 100%;
+      grid-gap: 7px;
+
+      grid-template-columns: 30px 5fr 1fr 30px;
+      grid-template-rows: 220px 1fr 200px;
+      grid-template-areas:
+      ". h n ."
+      ". m a ."
+      ". f f .";
+  }
+        
+ /*grid-area header: start */ 
+  .header {
+      background-image: url("img/animal_fitness_logo2.jpg");
+      background-size: contain;
+  }
+        
+  /*grid-area main:  page home: start */  
+    div.videoContainer video {
+      width: 600px;
+      height: auto;
+      margin: 10px; 
+    } 
+
+   /*grid-area main:  page inschrijven: start */      
+   form {
+    max-width: 550px;
+   } 
+    /*grid-area main:  page diensten: start */     
+   .reptileOnHand {
+    width: 600px;
+    height: auto;
+   }
+
+  /*grid-area aside: start */ 
+    .asideContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .asideContainer > li {
+      font-size: 22px;
+      height: 200px;  
+      padding: 20px 15px; 
+    }
+    .hillsLogo {
+      width: auto;
+      height: 180px;
+     }
+  }    
+    
+@media screen and (min-width: 2560px) /* Extra wide screen, QHD, 2K */ {
+  .container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 30px repeat(12, 1fr) 30px;
+      grid-template-rows: 10% 1fr 10%;
+      grid-gap: 3px;  
+      justify-content: start;
+  }
+    /*grid-area main:  page diensten: start */       
+    .header {   
+        grid-column: 4 / -1;
+        
+    }
+        
+    /*grid-area nav: start */   
+    .nav {  
+        grid-column: 1 / 4;
+        flex-direction: row;
+        justify-content: center;
+    }   
+    /*flexbox items */
+    .nav > li { 
+        align-self: center;
+    }
+
+    .main {   
+        grid-column: 1 / 12;
+    }  
+    
+    div.videoContainer {
+      align-items: flex-start;
+    }
+
+    .aside {   
+        grid-column: 12 / -1;
+    }  
+    /*grid-area footer: start */  
+    .footer {              
+        grid-column: 1 / -1;
+        background-size: contain; /*background picture*/    
+    }
+    }
