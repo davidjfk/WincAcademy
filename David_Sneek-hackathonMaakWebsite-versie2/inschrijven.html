@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> opdr_12_website_hackathon</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="page_home.css">
+    <link rel="stylesheet" type="text/css" href="page_diensten.css">
+    <link rel="stylesheet" type="text/css" href="page_voorwaarden.css">
+    <link rel="stylesheet" type="text/css" href="page_inschrijven.css">
+    <link rel="stylesheet" type="text/css" href="tablet.css">
+    <link rel="stylesheet" type="text/css" href="desktop.css">
+    <link rel="stylesheet" type="text/css" href="widescreen.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Animal Fitness</h1>
+            <img class="company-logo-not-mobile" src="img/animal_fitness_logo2.jpg" />
+            <!--only displayed on tablet and bigger-->
+        </header>
+        <nav class="nav">
+            <li><img class="company-logo-mobile" src="img/animal_fitness_logo.jpg" /></li>
+            <li><a class="animal-fitness-link" href="index.html">Home</a></li>
+            <li><a class="animal-fitness-link" href="diensten.html">Diensten</a></li>
+            <li><a class="animal-fitness-link" href="voorwaarden.html#">Voorwaarden</a></li>
+        </nav>
+        <main class="main">
+            <h2 class="inschrijven">Inschrijven</h2>
+            <form action="Script URL" method="GET|POST">
+                <fieldset>
+                    <legend><span class="fieldset-title">1</span>&nbsp&nbsp Gegevens huisdier</legend>
+                    <label for="roepnaam-huisdier">Roepnaam huisdier:</label>
+                    <input type="text" id="roepnaam-huisdier" name="roepnaam-huisdier">
+                    <label for="city">Soort huisdier:</label>
+                    <select name="soort-huisdier" id="soort-huisdier">
+                        <option value="Hond">Hond</option>
+                        <option value="Kat">Kat</option>
+                        <option value="Knaagdier">Knaagdier</option>
+                        <option value="Reptiel">Reptiel</option>
+                    </select>
+                    <label>Leeftijd huisdier (jaar):</label>
+                    <select name="leeftijd" id="leeftijd">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="16+">16+</option>
+                    </select>
+                    <label>Mijn huisdier:</label>
+                    <input type="radio" value="weinig-buiten" name="weinig-buiten"><label for="weinig-buiten"
+                        class="light">&nbsp&nbsp
+                        komt weinig buiten</label><br>
+                    <input type="radio" value="doel-nodig" name="doel-nodig"><label for="doel-nodig"
+                        class="light">&nbsp&nbsp
+                        heeft een
+                        doel nodig</label><br>
+                    <input type="radio" value="het-beste" name="het-beste"><label for="het-beste" class="light">&nbsp&nbsp
+                        wil het beste uit zichzelf halen</label><br>
+                    <input type="radio" value="anders" name="anders"><label for="anders" class="light">&nbsp&nbsp
+                        anders:</label><br>
+                    <textarea name="message" rows="4" cols="30">
+                    </textarea>
+
+                    <label for="fitness-activity">Gewenste fitness activiteit</label>
+                    <select id="fitness-activity" name="fitness-activity">
+                        <optgroup label="maandag">
+                            <option value="catHipHop">Cat hip hop jumping around (kat), 13.00-14.00</option>
+                            <option value="knaagEnVertraag"> Knaag en vertraag (knaagdier), 14.00-17.00</option>
+                        </optgroup>
+                        <optgroup label="dinsdag">
+                            <option value="balanceDiscs">Balance Discs (hond), 09.00 - 11.00</option>
+                            <option value="catHipHop">Cat hip hop jumping around (kat), 13.00-14.00</option>
+                            <option value="knaagEnVertraag"> Knaag en vertraag (knaagdier), 14.00-17.00</option>
+                        </optgroup>
+                        <optgroup label="woensdag">
+                            <option value="balanceDiscs">Balance Discs (hond), 09.00 - 11.00</option>
+                            <option value="catHipHop">Cat hip hop jumping around (kat), 13.00-14.00</option>
+                            <option value="reptileMania">Reptile mania (reptiel), 15.00-17.00</option>
+                        </optgroup>
+                        <optgroup label="donderdag">
+                            <option value="balanceDiscs">Balance Discs (hond), 09.00 - 11.00</option>
+                            <option value="catHipHop">Cat hip hop jumping around (kat), 13.00-14.00</option>
+                        </optgroup>
+                        <optgroup label="vrijdag">
+                            <option value="balanceDiscs">Balance Discs (hond), 09.00 - 11.00</option>
+                            <option value="catHipHop">Cat hip hop jumping around (kat), 13.00-14.00</option>
+                            <option value="knaagEnVertraag"> Knaag en vertraag (knaagdier), 14.00-17.00</option>
+                        </optgroup>
+                        <optgroup label="zaterdag">
+                            <option value="balanceDiscs">Balance Discs (hond), 09.00 - 11.00</option>
+                            <option value="reptileMania">Reptile mania (reptiel), 15.00-17.00</option>
+                            <option value="intervalTraining">Intervaltraining (gemixt), 15.00-16.00</option>
+                        </optgroup>
+                        <optgroup label="zondag">
+                            <option value="balanceDiscs">Balance Discs (hond), 09.00 - 11.00</option>
+                            <option value="intervalTraining">Intervaltraining (gemixt), 15.00-16.00</option>
+                        </optgroup>
+                    </select>
+
+                </fieldset>
+                <fieldset>
+                    <legend><span class="fieldset-title">2</span>&nbsp&nbsp Uw gegevens</legend>
+                    <label for="naam-klant">Naam:</label>
+                    <input type="text" id="naam-klant" name="naam-klant">
+                    <label for="telNr">Telefoonnummer:</label>
+                    <input type="tel" id="tel-nr" name="tel-nr">
+                    <label for="mail">Email:</label>
+                    <input type="email" id="email-klant" name="email-klant">
+                    <label for="bio">Opmerkingen:</label>
+                    <textarea id="opmerkingen" name="opmerkingen"></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="job">Animal Fitness ken ik van</label>
+                    <select id="bekend-van" name="bekend-van">
+                        <option value="Animal Sports Magazine">Animal Sports Magazine</option>
+                        <option value="google">Google</option>
+                        <option value="viaVia">Via via</option>
+                        <option value="overig"> Dierenarts</option>
+                        <option value="web_designer">Overig</option>
+                    </select>
+
+
+                    <input type="checkbox" id="algemene-voorwaarden"><label class="light">&nbsp Algemene
+                        voorwaarden gelezen en akkoord</label><br>
+                </fieldset>
+                <button type="submit">Versturen</button>
+            </form>
+        </main>
+        <aside class="aside">
+            <ul class="aside-container">
+                <li><a href="https://www.hillspet.nl/science-plan/cat-food">HILL'S: PREMIUM DIERENVOER ONDERSTEUND DOOR
+                        WETENSCHAP</a></li>
+                <li><a href="https://hillspet.nl" target="_blank"><img class="hills-logo" src="img/hills.png"
+                            alt="Hills_petfood_img"></a></li>
+            </ul>
+        </aside>
+        <footer class="footer">
+        </footer>
+    </div>
+</body>
+
+
+</html>

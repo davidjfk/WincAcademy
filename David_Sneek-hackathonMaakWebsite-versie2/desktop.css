@@ -1,0 +1,54 @@
+@media screen and (min-width: 1024px) /* Desktop, HD */ {
+  .container {
+    height: 100%;
+    grid-gap: 7px;
+    grid-template-columns: 30px 5fr 1fr 30px;
+    grid-template-rows: 220px 1fr 200px;
+    grid-template-areas:
+      ". h n ."
+      ". m a ."
+      ". f f .";
+  }
+
+  /*grid-area header: start */
+  .header {
+    background-image: url("img/animal_fitness_logo2.jpg");
+    background-size: contain;
+  }
+
+  /*grid-area main:  page home: start */
+  div.video-container video {
+    width: 600px;
+    height: auto;
+    margin: 10px;
+  }
+
+  /*grid-area main:  page inschrijven: start */
+  form {
+    max-width: 550px;
+  }
+  /*grid-area main:  page diensten: start */
+  .reptile-on-hand {
+    width: 600px;
+    height: auto;
+  }
+
+  /*grid-area aside: start */
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .aside-container > li {
+    font-size: 22px;
+    height: 200px;
+    padding: 20px 15px;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+  .hills-logo {
+    width: auto;
+    height: 180px;
+  }
+}

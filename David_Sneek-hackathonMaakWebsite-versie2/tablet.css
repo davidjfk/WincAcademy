@@ -1,0 +1,72 @@
+@media screen and (min-width: 600px) /* tablet */ {
+.container {
+  height: 100%;
+  grid-gap: 7px;
+  grid-template-columns: 30px 1fr 1fr 30px;
+  grid-template-rows: 220px 1fr 150px 200px;
+  grid-template-areas:
+    ". h n ."
+    ". m m ."
+    ". a a ."
+    ". f f .";
+}
+
+/*grid-area header: start */
+/*goal: swap company logo from flexbox navbar in nav to header, where it is not part of a flexbox*/
+h1,
+img.company-logo-mobile {
+  display: none;
+}
+
+.header {
+  background-image: url("img/animal_fitness_logo2.jpg");
+  background-size: 100% 100%;
+}
+
+/*grid-area nav: start */
+.nav {
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 20px;
+}
+/*flexbox items */
+.nav > li {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/*grid-area main:  page home: start */
+div.video-container video {
+  width: 440px;
+  height: auto;
+  margin: 10px;
+}
+
+/*grid-area main:  page inschrijven: start */
+form {
+  max-width: 500px;
+}
+
+/*grid-area main:  page Diensten: start */
+.reptile-on-hand {
+  width: 450px;
+  height: auto;
+}
+
+.aside-container > li {
+  font-size: 18px;
+  width: 250px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.hills-logo {
+  width: auto;
+  height: 120px;
+}
+/*grid-area footer: start */
+.footer {
+  background-image: url("img/dogRow.png");
+  background-size: 100% 100%;
+}
+}
+  

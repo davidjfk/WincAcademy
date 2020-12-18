@@ -1,0 +1,11 @@
+/*grid-area main:  page home: */
+.video-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+div.video-container video {
+  width: 390px;
+  height: auto;
+  margin: 10px;
+}

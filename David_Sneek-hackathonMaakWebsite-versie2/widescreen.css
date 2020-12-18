@@ -1,0 +1,49 @@
+@media screen and (min-width: 2560px) /* Extra wide screen, QHD, 2K */ {
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30px repeat(12, 1fr) 30px;
+    grid-template-rows: 10% 1fr 10%;
+    grid-gap: 3px;
+    justify-content: start;
+  }
+  /*grid-area main:  page diensten: start */
+  .header {
+    grid-column: 4 / -1;
+  }
+
+  /*grid-area nav: start */
+  .nav {
+    grid-column: 1 / 4;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  /*flexbox items */
+  .nav > li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  /*correction for links in the navbar*/
+  .nav li a {
+    margin: 1px;
+  }
+
+  .main {
+    grid-column: 1 / 12;
+  }
+
+  div.video-container {
+    align-items: flex-start;
+  }
+
+  .aside {
+    grid-column: 12 / -1;
+  }
+  /*grid-area footer: start */
+  .footer {
+    grid-column: 1 / -1;
+    background-size: contain; /*background picture*/
+  }
+}
