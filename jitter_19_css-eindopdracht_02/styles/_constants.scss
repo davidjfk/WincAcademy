@@ -1,0 +1,15 @@
+/* global variables */
+$background-color: #c3cfe2;
+$background-color-header: #c3cfe2;
+$background-color-nav: rgb(163, 107, 159);
+$background-color-nav__list: #c3cfe2;
+$background-color-nav__list-link: #c3cfe2;
+$background-color-nav__list-link-color: rgb(151, 64, 142);
+$background-color-nav__list-link-on-hover: rgb(151, 64, 142);
+$nav__list-link-on-hover-font-color: #404955;
+
+@mixin textDefault {
+  max-width: 700px;
+  text-align: center;
+  padding: $paddingDefaultValue;
+}
