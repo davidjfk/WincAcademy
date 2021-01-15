@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import "constants";
+
+@import "portfolio";
+@import "social-media-buttons";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+main,
+body {
+  height: 100%;
+  background-color: $background-color;
+  background-image: url("./image/css3.png");
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+// logo with navbar
+.header {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px 5%;
+}
+
+.header__logo {
+  max-width: 90%;
+  height: auto;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.nav {
+  padding: 2p;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.nav__list-item {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.5em;
+  color: $background-color-nav__list-link-color;
+  text-decoration: none;
+  padding: 20px 20px 20px 20px;
+  display: inline-block;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  background: black;
+  padding: 1em 3em;
+  color: white;
+  outline: 3px solid black;
+  transition: all ease-in-out 300ms;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  outline-offset: 5px;
+}
+
+.address {
+  display: grid;
+  justify-items: center;
+}
+
+@media screen and (min-width: 401px) {
+  html,
+  main,
+  body {
+    overflow-x: hidden;
+  }
+}
