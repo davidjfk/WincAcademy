@@ -1,0 +1,74 @@
+// req: if viewport < 400px, show horizontal scrollbar.
+// responsive design choice: testimonial__name and testimonial__image have fixed size and distance in between. This gives the viewer a fixed spot to focus on while everything around it responds to the viewport dimensions as the testimonial grows or shrinks.
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+$font-family: "Open Sans";
+$background-color-tekst: #fff;
+$min-height-page: 1000px;
+$max-height-page: 1300px;
+$min-width-page: 400px;
+$max-width-page: 975px;
+$background-footer: #686de0;
+
+main {
+  height: 100%;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: clamp($min-height-page, 50%, $max-height-page);
+  width: clamp($min-width-page, 75%, $max-width-page);
+  margin-left: 8%;
+  background: white;
+  text-align: center;
+  position: relative;
+  font-family: $font-family;
+  border-radius: 40px;
+  box-shadow: -10px 12px 5px 0px rgba(12, 12, 12, 0.15),
+    10px 13px 10px 0px rgba(7, 7, 7, 0.15);
+  &__tekst {
+    height: 69%;
+    width: 100%;
+    padding: 12% 5%;
+    font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+    color: rgb(85, 85, 85);
+  }
+  &__image {
+    display: border-box;
+    top: 68%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    &-source {
+      height: 240px;
+      width: 240px;
+      border-radius: 50%;
+      background: white;
+      padding: 4%;
+    }
+  }
+  &__name {
+    height: 22%;
+    width: 100%;
+    //fixate &__name below &__image in responsive mode
+    padding-top: 120px;
+    background: $background-footer;
+    margin-top: 5px;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 60%;
+  }
+  &__url {
+    //display &__url near &__name in responsive mode
+    align-self: flex-start;
+    height: 9%;
+    width: 100%;
+    background: $background-footer;
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    color: rgb(163, 167, 231);
+    border-radius: 0px 0px 40px 40px;
+  }
+}
