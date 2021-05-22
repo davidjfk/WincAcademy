@@ -67,7 +67,7 @@ const impeachTrumpSplice = function(array) {
 console.log(impeachTrumpSlice(presidents)); // ["Obama", "Bush", "Clinton"]
 console.log("slice does not mutate the array presidents")
 console.log(impeachTrumpSplice(presidents)); // ["Obama", "Bush", "Clinton"]
-console.log("slice does mutate the array presidents")
+console.log("splice does mutate the array presidents")
 
 console.log(`vraag F: `)
 
