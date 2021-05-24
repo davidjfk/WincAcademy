@@ -223,11 +223,7 @@ console.log(`cummulatief gewicht van Marvel Comics superhelden: ${cummulatiefGew
 
 console.log("vraag 8: oplossing (met .filter)  ")
 
-let isConvertableToInt1 = (str) => {
-    let pattern = /[\sA-Za-z]/g;
-    let result = pattern.test(str);
-    return !result;
-  }
+
 let searchHeaviestHero = function(){
     let weightOfHeros = [];
     let highestWeight = 0;
@@ -236,7 +232,7 @@ let searchHeaviestHero = function(){
             for (let { weight } of arraySuperheroes) {
                 let intMyHeroWeight;
                 weight = weight ?? "0";
-                if (isConvertableToInt1(weight)) {
+                if (isConvertableToInt(weight)) {
                     intMyHeroWeight = parseInt(weight)
                 } else {
                     weight = "0"
@@ -262,7 +258,7 @@ let highestWeight = 0;
 for (let { weight } of arraySuperheroes) {   
     let intMyHeroWeight;
         weight = weight ?? "0";    
-        if (isConvertableToInt1(weight)){
+        if (isConvertableToInt(weight)){
             intMyHeroWeight = parseInt(weight)
         } else {
             weight = "0"
